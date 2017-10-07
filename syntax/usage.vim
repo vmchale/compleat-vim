@@ -4,7 +4,7 @@ endif
 
 syntax match lineError "\v[^;]$"
 syntax match usageSpecial "\v[=\|(\.\.\.)<>;]"
-syntax match usageParens "\v\(|\)<>"
+syntax match usageParens "\v\(|\)"
 
 highlight link lineError Error
 highlight link usageParens Special
