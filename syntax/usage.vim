@@ -6,7 +6,7 @@ syntax match lineError "\v[^;]$"
 syntax match usageSpecial "\v[=\|(\.\.\.)<>;]"
 syntax match usageParens "\v\(|\)"
 syntax region usageArg start='<' end='\v>|$' contains=usageSpecial
-syntax region usageVar start='\v^' end='=' contains=usageSpecial
+syntax region usageVar start='\v^' end='\v=|$' contains=usageSpecial
 
 highlight link lineError Error
 highlight link usageParens Special
