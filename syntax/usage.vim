@@ -7,11 +7,13 @@ syntax match usageSpecial "\v[=\|(\.\.\.)<>;]"
 syntax match usageParens "\v\(|\)"
 syntax region usageArg start='<' end='\v>|$' contains=usageSpecial
 syntax region usageVar start='\v^[A-Z]' end=' ' contains=usageSpecial
+syntax match programName "\v[A-Z\-]"
 
 highlight link lineError Error
 highlight link usageParens Special
 highlight link usageSpecial Number
 highlight link usageArg Keyword
 highlight link usageVar Keyword
+highlight link programName Identifier
 
 let b:current_syntax = 'usage'
