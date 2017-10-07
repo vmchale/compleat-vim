@@ -3,8 +3,8 @@ if exists('b:current_syntax')
 endif
 
 syntax match lineError "\v[^;]$"
-syntax keyword usageParens ( )
-syntax match usageSpecial "\v[=\|\(\.\.\.\)<>]"
+syntax match usageParens "\v\(|\)"
+syntax match usageSpecial "\v[=\|(\.\.\.)<>]"
 
 highlight link lineError Error
 highlight link usageParens Special
